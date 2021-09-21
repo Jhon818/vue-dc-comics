@@ -5,12 +5,14 @@
         {{product.titolo}}
       </li>
     </ul> -->
-
-    <ProductCard 
+<div class="main-center">
+<ProductCard 
       v-for="(card, index) in cards" 
       :key="index"
       :card="card"
     />
+</div>
+    
 
         <button>LOAD MORE</button>
   </div>
@@ -25,6 +27,8 @@ export default {
     ProductCard
   },
   data() {
+    console.log(cards)
+
     return {
       cards: cards
     }
@@ -35,8 +39,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
     .main {
+        display: flex;
         position: relative;
-        height: 100vh;
+        justify-content: center;
         background: black;
 
         button {
@@ -52,6 +57,15 @@ export default {
             color: white;
             text-transform: uppercase;
             background: blue;
+        }
+
+        .main-center {
+          display: flex;
+          color: white;
+          padding-top: 20px;
+          padding-bottom: 80px;
+          justify-content: center;
+          flex-flow: row wrap;
         }
     }
 </style>

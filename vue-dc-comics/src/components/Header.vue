@@ -7,9 +7,8 @@
     <nav>
       <ul>
           <li v-for="(link,index) in links" :key="index">
-              <a :class="(link.current) ? 'active' : null" href="link.url"></a>
               <span>{{link.text}}
-                  <div></div>
+                  <div :class="(link.current) ? 'active' : null" href="link.url"></div>
               </span>
          </li>
       </ul>
@@ -51,8 +50,7 @@
       height: 50px;
    }
 
-   li:hover,
-   &.active {
+   li:hover {
        color: $primary;
 
         span > div {
@@ -76,6 +74,9 @@
 
    }
 
+  .active {
+    display: block;
+  }
     img {
        width: 4rem;
    }

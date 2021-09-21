@@ -17,11 +17,14 @@ export default {
 
 div.banner-header-btm {
    width: 100%;
-   height: 50%;
+   height: 300px;
+   z-index: -1;
+   position: relative;
+   
 
     img {
         width: 100%;
-        height: 50vh;
+        transform-origin: center;
     }
 }
 
