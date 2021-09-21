@@ -2,10 +2,10 @@
   <div id="app">
     <Header />
 
+    <HeaderBtm />  
     
-    
-      <Main />
-    
+      <Products />
+      <MainBtm />
     
 
     <Footer />
@@ -15,17 +15,23 @@
 <script>
 // La @ ci porta direttamente nella cartella src del progetto
     import Header from '@/components/Header.vue'
-    import Main from '@/components/Main.vue'
+    import HeaderBtm from '@/components/HeaderBtm.vue'
+    import MainBtm from '@/components/MainBtm.vue'
     import Footer from '@/components/Footer.vue'
+    import Products from '@/components/Products.vue'
+
     export default {
       name: 'App',
       components: {
         Header,
-        Main,
+        HeaderBtm,
+        Products,
+        MainBtm,
         Footer
       }
     }
 </script>
+           
 
       <style lang="scss">
       @import "./style/general";
