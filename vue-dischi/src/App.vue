@@ -2,17 +2,20 @@
   <div id="app">
     <Header />
     <Main />
+    <Cards />
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Main from '@/components/Main.vue'
+import Cards from '@/components/Cards.vue'
 export default {
   name: 'App',
   components: {
     Header,
-    Main
+    Main,
+    Cards
   }
 }
 </script>
